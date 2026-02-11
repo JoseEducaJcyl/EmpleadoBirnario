@@ -1,13 +1,18 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-  // to see how IntelliJ IDEA suggests fixing it.
-  IO.println(String.format("Hello and welcome!"));
+import java.util.ArrayList;
+import java.util.List;
 
-  for (int i = 1; i <= 5; i++) {
-    //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-    // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-    IO.println("i = " + i);
-  }
+public class Main {
+    public static void main(String[] args) {
+        List<Empleado>  empleados = new ArrayList<>();
+        empleados.add(new Empleado("emp1",1,1500.0));
+        empleados.add(new Empleado("emp2",2,1600.0));
+        empleados.add(new Empleado("emp3",3,1450.0));
+
+        Escritor escritor;
+        Lector lector;
+        escritor = new Escritor();
+        lector = new Lector();
+        escritor.guardarEmpleado(empleados,"empleados.lista");
+        lector.leerEmpleados("empleados.lista");
+    }
 }
