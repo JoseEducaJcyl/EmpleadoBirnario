@@ -4,6 +4,8 @@ import java.io.ObjectInputStream;
 import java.util.List;
 
 public class Lector {
+    //Metodo leerEmpleado que se le pasa un String con el nombre del archivo 
+    // y lee el fichero binario 
     public void leerEmpleados(String archivo) {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(archivo))) {
             List<Empleado> empleados = (List<Empleado>) ois.readObject();
