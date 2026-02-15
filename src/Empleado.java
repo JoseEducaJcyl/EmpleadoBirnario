@@ -1,3 +1,4 @@
+//Clase Empleado con los atributos nombre, id y salario 
 import java.io.Serializable;
 
 public class Empleado implements Serializable {
